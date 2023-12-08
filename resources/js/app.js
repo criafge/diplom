@@ -1,12 +1,10 @@
 import './bootstrap';
-function hoverBorder(){
-    let button = document.getElementById('login-btn')
-    button.addEventListener("mouseover", function(){
-        button.classList.remove("gradient")
-        button.classList.add("gradient-border")
-    })
-    button.addEventListener("mouseout", function(){
-        button.classList.remove("gradient-border")
-        button.classList.add("gradient")
-    })
-}
+import { createApp } from 'vue';
+
+const app = createApp({});
+
+// import ExampleComponent from './components/ExampleComponent.vue'
+import CreateCourseComponent from './components/CreateCourseComponent.vue'
+app.component(CreateCourseComponent);
+
+app.mount('#app');

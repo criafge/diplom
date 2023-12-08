@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h2>Добавить новый курс</h2>
-        <form>
+        {{-- <form>
             <div class="mb-3">
                 <label for="title" class="form-label">Наименование</label>
                 <input type="text" class="form-control" id="title" name="title">
@@ -21,6 +21,7 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Добавить</button>
-        </form>
+        </form> --}}
+        <CreateCourseComponent></CreateCourseComponent>
     </div>
 @endsection
