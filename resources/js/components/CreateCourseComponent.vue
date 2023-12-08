@@ -8,16 +8,8 @@
             <label for="description" class="form-label">Описание</label>
             <textarea class="form-control" name="description"></textarea>
         </div>
-        <div class="mb-3 form-check">
-            <label for="language" class="form-check-label">Язык</label>
-            <select name="language" id="">
-                @foreach ($languages as $language)
-                <option value="{{$language->id}}">{{ $language -> title }}</option>
-                @endforeach
-            </select>
-        </div>
         <div class="mb-3">
-            <input class="form-control" value="Добавить">
+            <input type="submit" class="form-control" value="Добавить">
         </div>
     </div>
 </template>

@@ -22,6 +22,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Добавить</button>
         </form> --}}
-        <CreateCourseComponent></CreateCourseComponent>
+        <create-course-component></create-course-component>
+
     </div>
 @endsection
