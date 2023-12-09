@@ -14,10 +14,6 @@
         </div>
         <div class="mb-3">
             <input @click.prevent="createCourse" type="submit" class="form-control" value="Добавить">
-            <textarea class="form-control" name="description"></textarea>
-        </div>
-        <div class="mb-3">
-            <input type="submit" class="form-control" value="Добавить">
         </div>
     </div>
 </template>
