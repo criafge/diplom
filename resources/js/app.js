@@ -3,8 +3,8 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
-// import ExampleComponent from './components/ExampleComponent.vue'
-import CreateCourseComponent from './components/CreateCourseComponent.vue'
-app.component(CreateCourseComponent);
+import AdminComponent from './components/AdminComponent.vue'
+
+app.component('admin-component', AdminComponent);
 
 app.mount('#app');

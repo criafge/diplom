@@ -13,14 +13,12 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('language_id');
-            $table->foreign('language_id')->references('id')->on('languages');
             $table->string('title');
             $table->string('description');
             $table->decimal('cost');
             $table->timestamps();
         });
-    }
+    }   
 
     /**
      * Reverse the migrations.

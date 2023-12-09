@@ -24,13 +24,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(User $user, Language $language)
+    public function index()
     {
-        $user = Auth::user();
         $role = Auth::user()->role->id;
         switch ($role) {
             case 1:
-                return view('admin', ['languages' => $language->all()]);
+                return redirect('/admin');
             case 2:
                 return view('home');
             case 3:

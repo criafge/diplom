@@ -11,6 +11,5 @@ class Course extends Model
         'title',
         'cost',
         'description',
-        'language_id'
     ];
 }
