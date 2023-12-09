@@ -6,7 +6,7 @@
             <div class="w-100 d-flex align-items-center justify-content-between" style="height: 875px;">
                 <div>
                     <h1 style="font-size: 64px">GlobalSpeak</h1>
-                    <p class="fs-2">Изучай языки просто и не выходя из дома</p>
+                    <p class="fs-2">Просто изучай языки и не выходи из дома</p>
                 </div>
                 <div class="intro-img">
                     <img src="img/intro3.jpg" style="height: 700px" alt="">
