@@ -62,7 +62,7 @@ export default {
         getCourses() {
             axios.get('./api/admin/')
                 .then(data => {
-                    this.courses = data.data
+                    this.courses = data.data[0].courses
                 })
         },
         changeId(id, title, description, cost) {
