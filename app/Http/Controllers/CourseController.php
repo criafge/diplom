@@ -24,4 +24,7 @@ class CourseController extends Controller
         $course->delete();
         return response([]);
     }
+    public function showCourse(Course $course){
+        return view('course', ['course'=>$course]);
+    }
 }

@@ -15,31 +15,18 @@
             <div class="d-flex flex-column gap-3 cards">
                 <h2>Популярные языки</h2>
                 <div class="d-flex justify-content-between">
-                    <div class="card hover-card d-flex flex-column gap-5" style="width: 18rem;">
-                        <img src="img/english.png" class="card-img-top h-50" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Английский язык</h5>
-                            <p class="card-text">1200 руб/мес.</p>
-                            <a id="login-btn" href="#" class="btn gradient">Подробнее</a>
+                    @foreach ($courses as $course)
+                        <div class="card hover-card d-flex flex-column gap-5" style="width: 18rem;">
+                            <img src="img/english.png" class="card-img-top h-50" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $course->title }}</h5>
+                                <p class="card-text">{{ $course->cost }} руб/мес.</p>
+                                <a id="login-btn" href="course/{{$course->id}}" class="btn gradient">Подробнее</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card hover-card d-flex flex-column gap-5" style="width: 18rem;">
-                        <img src="img/spanish.jpg" class="card-img-top h-50" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Испанский язык</h5>
-                            <p class="card-text">1200 руб/мес.</p>
-                            <a id="login-btn" href="#" class="btn gradient">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="card hover-card d-flex flex-column gap-5" style="width: 18rem;">
-                        <img src="img/french.png" class="card-img-top h-50" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Французский язык</h5>
-                            <p class="card-text">1200 руб/мес.</p>
-                            <a id="login-btn" href="#" class="btn gradient">Подробнее</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
+                {{ $courses->links('pagination::bootstrap-5') }}
                 <div>
                     <a href="{{ route('courses') }}" class="fs-5">Смотреть все</a>
                 </div>

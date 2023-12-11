@@ -31,9 +31,13 @@ class HomeController extends Controller
             case 1:
                 return redirect('/admin');
             case 2:
-                return view('cabinet');
+                return redirect('/teacher');
             case 3:
                 return view('home');
         }
+    }
+
+    public function cabinet(){
+        return view('cabinet');
     }
 }
