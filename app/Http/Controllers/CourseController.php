@@ -17,6 +17,7 @@ class CourseController extends Controller
     public function updateCourse(UpdateRequest $request, Course $course){
         $data = $request->validated();
         $course->update($data);
+        $errors = $data->errors(); //вывод ошибок на поля в админке
         return $course;
     }
 

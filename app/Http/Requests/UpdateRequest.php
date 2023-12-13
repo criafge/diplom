@@ -27,4 +27,12 @@ class UpdateRequest extends FormRequest
             'cost' => 'required'
         ];
     }
+    public function messages()
+    {
+        return [
+            'title.required' => 'Заполни поле, дурак',
+            'description.required' => 'Ты че все еще не понял?',
+            'cost.required' => 'Ну без цены то как емае'
+        ];
+    }
 }
