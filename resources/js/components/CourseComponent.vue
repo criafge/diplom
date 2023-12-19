@@ -47,7 +47,7 @@ import axios from 'axios';
 export default {
     mounted() {
         this.getCourses(),
-            this.deleteCourse()
+        this.deleteCourse()
     },
     data() {
         return {
@@ -61,8 +61,9 @@ export default {
     methods: {
         getCourses() {
             axios.get('./api/admin/')
-                .then(data => {
+                .then((data) => {
                     this.courses = data.data[0].courses
+                    console.log(data);
                 })
         },
         changeId(id, title, description, cost) {

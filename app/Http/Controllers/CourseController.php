@@ -9,23 +9,9 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public function createCourse(CreateCourseRequest $request){
-        $data = $request->validated();
-        $course = Course::create($data);
-        return $course;
-    }
-    public function updateCourse(UpdateRequest $request, Course $course){
-        $data = $request->validated();
-        $course->update($data);
-        $errors = $data->errors(); //вывод ошибок на поля в админке
-        return $course;
-    }
 
-    public function deleteCourse(Course $course){
-        $course->delete();
-        return response([]);
-    }
-    public function showCourse(Course $course){
-        return view('course', ['course'=>$course]);
+    public function showCourse(Course $course)
+    {
+        return view('course', ['course' => $course]);
     }
 }

@@ -6,8 +6,8 @@ const app = createApp({});
 import AdminComponent from './components/AdminComponent.vue'
 app.component('admin-component', AdminComponent);
 
-import TeacherComponent from './components/TeacherComponent.vue'
-app.component('teacher-component', TeacherComponent);
+import CabinetComponent from './components/CabinetComponent.vue'
+app.component('cabinet-component', CabinetComponent);
 
 
 app.mount('#app');
