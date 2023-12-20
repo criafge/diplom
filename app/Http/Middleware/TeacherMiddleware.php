@@ -17,7 +17,7 @@ class TeacherMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if( Auth::guest() || auth()->user()->role_id !== 2){
-            return redirect()->route('main');
+            return redirect('/');
         }
         return $next($request);
     }

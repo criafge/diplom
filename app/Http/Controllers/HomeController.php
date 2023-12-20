@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\Language;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -33,7 +34,11 @@ class HomeController extends Controller
             case 2:
                 return redirect('/teacher');
             case 3:
-                return view('home', ['user'=>Auth::user()]);
+                $course_id = Auth::user()->sub->course_id;
+                $course = Course::find($course_id);
+                $course->subscription = Auth::user()->sub->id;
+                return view('home', ['user'=>Auth::user(), 'course' => $course]);
+                // dd($course);
         }
     }
 

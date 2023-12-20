@@ -48,4 +48,7 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
+    public function sub(){
+        return $this->hasOne(Subscription::class);
+    }
 }

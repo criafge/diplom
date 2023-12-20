@@ -26,14 +26,13 @@ Route::post('/update-data-user/{user}', 'App\Http\Controllers\UpdateDataUserCont
 
 Route::get('/courses', 'App\Http\Controllers\ShowCoursesController')->name('courses');
 
+
+
 Route::post('create-sub', 'App\Http\Controllers\user\CreateSubController')->name('create-sub')->middleware('sub');
 
-// Route::get('course/{course}', function(){
-//     return view('course');
-// })->name('course');
+Route::get('course/{course}', 'App\Http\Controllers\user\ShowLessonsController')->name('course');
 
-
-
+Route::get('delete-sub/{subscription}', 'App\Http\Controllers\user\DeleteSubController')->name('delete-sub');
 
 // Route::get('theory', function(){
 //     return view('theory');
