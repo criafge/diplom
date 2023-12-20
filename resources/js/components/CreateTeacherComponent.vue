@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container center-position w-300 mb-5">
         <h2>Добавить преподавателя</h2>
         <div class="mb-3">
             <label for="name" class="form-label" >Имя</label>
@@ -15,10 +15,16 @@
         </div>
         <div class="mb-3">
             <label for="course" class="form-label">Курс</label>
-            <select name="course" v-model="course_id">
+
+            <select class="form-select" aria-label="Default select example" name="course" v-model="course_id">
                 <option value="">Выберите курс</option>
                 <option v-for="course in courses" v-bind:value="course.id">{{ course.title }}</option>
             </select>
+
+            <!-- <select name="course" v-model="course_id">
+                <option value="">Выберите курс</option>
+                <option v-for="course in courses" v-bind:value="course.id">{{ course.title }}</option>
+            </select> -->
         </div>
         <div class="mb-3">
             <input @click.prevent="createTeacher" type="submit" class="form-control" value="Добавить">
@@ -52,7 +58,7 @@ export default {
                 this.course_id = null
                 console.log(data);
             })
-        }, 
+        },
         showCourses(){
             axios.get('api/admin/')
             .then(data=>{

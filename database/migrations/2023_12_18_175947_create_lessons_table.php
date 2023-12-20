@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('information'); //поменять потом на блоки с заданиями и теорией
+            $table->integer('num');
             $table->foreignId('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
             $table->timestamps();

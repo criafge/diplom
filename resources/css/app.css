@@ -48,3 +48,30 @@ input:focus{
     transition: .5s;
     border-bottom: 1px solid black;
 }
+
+.w-300{
+    width: 40% !important;
+}
+.center{
+    text-align: center;
+}
+
+.center-position{
+    margin: 0 auto;
+}
+
+.margin-r a{
+    margin-right: 30px;
+}
+
+.links-header a, .links-header{
+    text-decoration: none !important;
+    color:  rgba(135, 60, 255);
+    transition: .8s;
+}
+
+
+.links-header a:hover, .links-header:hover{
+    font-weight: bold;
+    transition: .8s;
+}

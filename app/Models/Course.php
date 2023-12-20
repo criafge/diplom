@@ -10,6 +10,11 @@ class Course extends Model
     protected $fillable = [
         'title',
         'description',
-        'language_id'
+        'language_id',
+        'cost'
     ];
+
+    public function lesson(){
+        return $this->hasMany(Lesson::class);
+    }
 }

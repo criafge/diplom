@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
-use Illuminate\Http\Request;
+use App\Models\Language;
 
 class IndexController extends Controller
 {
     public function index(){
-        $courses = Course::paginate(3);
-        return view('index', compact('courses'));
+        $languages = Language::paginate(3);
+        return view('index', compact('languages'));
     }
 }

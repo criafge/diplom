@@ -4,8 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateCourseRequest extends FormRequest
+class CreateLessonRequest extends FormRequest
 {
+    /**
+     * Determine if the user is authorized to make this request.
+     */
     public function authorize(): bool
     {
         return true;
@@ -20,9 +23,8 @@ class CreateCourseRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'description' => 'required',
-            'language_id' => 'required',
-            'cost' => 'required'
+            'information' => 'required',
+            'num' => 'required'
         ];
     }
 }

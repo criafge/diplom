@@ -19,10 +19,8 @@ return new class extends Migration
             $table->foreignId('course_id')->nullable();
             $table->foreign('course_id')->references('id')->on('courses');
 
-            $table->foreignId('subscription_id')->nullable();
-            $table->foreign('subscription_id')->references('id')->on('subscriptions');
-
             $table->string('name');
+
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

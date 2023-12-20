@@ -19,6 +19,8 @@ return new class extends Migration
             $table->foreignId('language_id');
             $table->foreign('language_id')->references('id')->on('languages');
 
+            $table->decimal('cost'); //стоимость в месяц
+
             $table->timestamps();
         });
     }

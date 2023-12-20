@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="container center-position w-300 mb-3">
         <div v-for="teacher in teachers">
-            <div class="card" style="width: 18rem;">
+            <div class="card" >
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{teacher.id}}</li>
                     <li class="list-group-item">{{ teacher.name }}</li>

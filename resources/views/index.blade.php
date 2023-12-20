@@ -15,20 +15,19 @@
             <div class="d-flex flex-column gap-3 cards">
                 <h2>Популярные языки</h2>
                 <div class="d-flex justify-content-between">
-                    @foreach ($courses as $course)
+                    @foreach ($languages as $language)
                         <div class="card hover-card d-flex flex-column gap-5" style="width: 18rem;">
                             <img src="img/english.png" class="card-img-top h-50" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $course->title }}</h5>
-                                <p class="card-text">{{ $course->cost }} руб/мес.</p>
-                                <a id="login-btn" href="course/{{$course->id}}" class="btn gradient">Подробнее</a>
+                                <h5 class="card-title">{{ $language->title }}</h5>
+                                <a id="login-btn" href="language/{{$language->id}}" class="btn gradient">Подробнее</a>
                             </div>
                         </div>
                     @endforeach
                 </div>
-                {{ $courses->links('pagination::bootstrap-5') }}
+                {{ $languages->links('pagination::bootstrap-5') }}
                 <div>
-                    <a href="{{ route('courses') }}" class="fs-5">Смотреть все</a>
+                    <a href="{{ route('courses') }}" class="fs-5 links-header">Смотреть все</a>
                 </div>
             </div>
 

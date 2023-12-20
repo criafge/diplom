@@ -33,11 +33,9 @@ class HomeController extends Controller
             case 2:
                 return redirect('/teacher');
             case 3:
-                return view('home');
+                return view('home', ['user'=>Auth::user()]);
         }
     }
 
-    public function cabinet(){
-        return view('cabinet');
-    }
+
 }

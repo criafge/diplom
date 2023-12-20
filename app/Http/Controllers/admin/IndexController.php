@@ -9,11 +9,12 @@ use App\Models\User;
 
 class IndexController extends Controller
 {
-    public function __invoke(Language $language)
+    public function __invoke()
     {
         $courses = Course::all();
         $teachers = User::where('role_id', 2)->get();
-        $data = array(['courses'=>$courses, 'teachers' => $teachers, 'languages' => $language->all()]);
+        $language = Language::all();
+        $data = array(['courses'=>$courses, 'teachers' => $teachers, 'languages' => $language]);
         return $data;
     }
 }

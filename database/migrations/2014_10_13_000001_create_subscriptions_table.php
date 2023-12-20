@@ -16,7 +16,14 @@ return new class extends Migration
             $table->foreignId('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
 
-            $table->decimal('cost');
+            $table->decimal('cost'); //общая стоимость
+            $table->integer('duration');
+
+            $table->timestamp('date_end');
+
+            $table->foreignId('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }
